@@ -14,5 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('app');
+    return view('welcome');
+});
+
+
+// Mostrar el formulario
+
+Route::get('/solicitud', function () {
+    return view('solicitud');
+});
+
+
+// Procesar el formulario
+Route::post('/solicitud', function () {
+    $message = request('solicitud');
+    //
 });
