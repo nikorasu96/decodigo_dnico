@@ -12,7 +12,7 @@
   <link
     href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap"
     rel="stylesheet">
-   @vite(['resources/css/solicitud.css'])
+   @vite(['resources/css/solicitud.css','resources/img/logo.png'])
 
 </head>
 
@@ -21,7 +21,7 @@
   <header>
     <nav class="navbar" style="background-color:   #424242  ">
       <div class="container d-flex align-items-center">
-        <img src="./logo.png" class="me-1">
+        <img src="./logo.png" >
         <h3 style="color: #f5f5f5;" class="">Decodigo</h3>
         <a class="navbar-brand ms-auto" href="#"></a>
       </div>
