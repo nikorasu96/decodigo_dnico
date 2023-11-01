@@ -12,7 +12,7 @@
   <link
     href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap"
     rel="stylesheet">
-   @vite(['resources/css/solicitud.css','resources/img/logo.png'])
+  @vite(['resources/css/solicitud.css', 'resources/img/logo.png'])
 
 </head>
 
@@ -21,14 +21,14 @@
   <header>
     <nav class="navbar" style="background-color:   #424242  ">
       <div class="container d-flex align-items-center">
-        <img src="./logo.png" >
+        <img src="./logo.png">
         <h3 style="color: #f5f5f5;" class="">Decodigo</h3>
         <a class="navbar-brand ms-auto" href="#"></a>
       </div>
     </nav>
   </header>
 
-  <div class="container mt-5">
+  <div class="container sm-5">
     <div class="left">
       <h2> ¿Porque trabajar con nosotros?</h2>
       <p>
@@ -47,31 +47,28 @@
         incluye versiones de Lorem Ipsum.
       </p>
     </div>
-    <div class="right">
-      <form action="#" method="post">
-        <section class="form-register">
-          <h1>Solicitud</h1>
-          <input class="controls" type="nombre" method="post"
-            class="form-control mx-auto" id="nombre" type="nombre"
-            name="nombre" placeholder="Ingrese su Nombre" required>
-
-          <input class="controls" type="email" method="post"
-            class="form-control mx-auto" id="email" type="email"
-            name="email" placeholder="Example@gmail.com" required>
-
-          <textarea class="controls" placeholder="Escriba su Solicitud"
-            id="floatingTextarea2" style="height: 100px"></textarea>
-
-
-          <div class="text-center">
-            <button type="submit" class="btn btn-dark mt-3">Enviar</button>
-          </div>
-        </section>
-      </form>
-      <br>
-      <br>
-      <br>
-    </div>
+  </div>
+  <div class="right">
+    <form action="#" method="post">
+      <section class="form-register">
+        <h1>Solicitud</h1>
+        <input class="controls form-control" type="text" id="nombre"
+          name="nombre" placeholder="Ingrese su Nombre" required>
+        <!-- Corregido el tipo de input y eliminado duplicado -->
+        <input class="controls form-control" type="email" id="email"
+          name="email" placeholder="Example@gmail.com" required>
+        <!-- Corregido el tipo de input y eliminado duplicado -->
+        <textarea class="controls form-control" placeholder="Escriba su Solicitud"
+          id="floatingTextarea2" style="height: 100px" required></textarea>
+        <div class="text-center">
+          <button type="submit" class="btn btn-dark mt-3">Enviar</button>
+        </div>
+      </section>
+    </form>
+    <br>
+    <br>
+    <br>
+  </div>
   </div>
 
   <script

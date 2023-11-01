@@ -1,0 +1,78 @@
+.navbar img {
+    max-width: 100%;
+    font-family: 'Eczar', sans-serif;
+  }
+
+h1 {
+    text-align: center;
+    color: #f0f3f4;
+    font-family: 'Eczar', sans-serif;
+}
+
+label {
+    color: #f0f3f4;
+    font-family: 'Eczar', sans-serif;
+}
+
+
+.btn {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #f0f3f4;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Eczar', sans-serif;
+}
+
+.right {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    /* Ajustado el margen superior */
+    padding: 30px;
+    background: #9575cd;
+    border-radius: 4px;
+    box-shadow: 7px 13px 37px #ffffff;
+    font-family: 'Eczar', sans-serif;
+}
+
+.left {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+    color: #f0f3f4;
+    text-align: center;
+    font-family: 'Eczar', sans-serif;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+.form-register {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 50px;
+    /* Ajustado el margen superior */
+    padding: 30px;
+    background: #512da8;
+    border-radius: 4px;
+    box-shadow: 7px 13px 37px #000;
+    font-family: 'Eczar', sans-serif;
+}
+
+navbar{
+    color: #212121;
+}
+
+footer{
+    margin-top: 70px;
+}

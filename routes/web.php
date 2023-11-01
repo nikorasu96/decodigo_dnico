@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
@@ -28,5 +28,16 @@ Route::get('/solicitud', function () {
 // Procesar el formulario
 Route::post('/solicitud', function () {
     $message = request('solicitud');
+    //
+});
+
+Route::get('/formulario', function () {
+    return view('formulario');
+});
+
+
+// Procesar el formulario
+Route::post('/formulario', function () {
+    $message = request('formulario');
     //
 });
