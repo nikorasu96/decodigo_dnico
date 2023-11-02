@@ -72,23 +72,25 @@
             <textarea class="form-control" id="mensaje" name="mensaje" rows="3"
               placeholder="Escriba su Solicitud" required></textarea>
           </div>
-          <div style="display: flex; justify-content: center;" class="">
-            <button type="submit" class="btn btn-dark mt-3"
-              data-bs-toggle="submit" aria-pressed="true">Enviar</button>
+          <div class="text-center">
+            <button type="submit" class="btn btn-dark mt-3">Enviar</button>
           </div>
       </section>
     </form>
   </div>
+
   </div>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+  <br>
+  <br>
 
-  <footer class="navbar bg-dark border-bottom border-body" data-bs-theme="dark"">
+
+  <footer class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container d-flex justify-content-center">
-      <p style="color:  #212121 " class="">&copy; <span
-          id="currentYear"></span>
+      <p class="">&copy; <span id="currentYear"></span>
         DeCodigo</p>
     </div>
   </footer>

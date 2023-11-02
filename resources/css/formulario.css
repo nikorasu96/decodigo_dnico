@@ -1,7 +1,9 @@
 .navbar img {
     max-width: 100%;
     font-family: 'Eczar', sans-serif;
-  }
+    color: #212121;
+}
+  
 
 h1 {
     text-align: center;
@@ -69,10 +71,8 @@ label {
     font-family: 'Eczar', sans-serif;
 }
 
-navbar{
-    color: #212121;
-}
 
-footer{
-    margin-top: 70px;
+footer p {
+    margin-top: 1px;
+    color: #f0f3f4;
 }

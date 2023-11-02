@@ -1,13 +1,7 @@
-nav {
-  background-color: #424242;
-
-}
-
 .navbar img {
-  width: 1.2rem;
+  max-width: 100%;
+  
 }
-
-
 
 div img {
   width: 30%;
@@ -17,7 +11,7 @@ div img {
   margin: 0 auto;
 }
 
-a {
+a{
   color: #f0f3f4;
 
 
@@ -54,7 +48,7 @@ body {
   box-shadow: 7px 13px 37px #e48cff;
   margin-bottom: 50px;
   margin-top: 50px;
-  font-family: 'Eczar';
+  font-family:'Eczar';
 }
 
 
@@ -65,8 +59,8 @@ body {
   justify-content: flex-start;
   font-size: 1.5em;
   font-size: 16px;
-  font-family: 'Eczar';
-
+  font-family:'Eczar';
+  
 
 }
 
@@ -78,8 +72,8 @@ body {
   margin-left: -50px;
   border-radius: 10px;
   vertical-align: top;
-  font-family: 'Eczar';
-
+  font-family:'Eczar';
+  
 }
 
 
@@ -94,7 +88,7 @@ p {
 
 h3 {
   text-align: left;
-  font-family: 'Eczar';
+  font-family:'Eczar';
 }
 
 .controls {
@@ -106,7 +100,7 @@ h3 {
   font-size: 18px;
   color: black;
   box-sizing: border-box;
-  font-family: 'Eczar';
+  font-family:'Eczar';
 }
 
 p {
@@ -117,7 +111,7 @@ p {
 label {
   color: #f5f5f5;
   margin-bottom: 8px;
-  font-family: 'Eczar';
+  font-family:'Eczar';
 }
 
 .btn {
@@ -132,7 +126,7 @@ label {
   padding: 10px 20px;
   margin: 0 auto;
   text-align: center;
-  font-family: 'Eczar';
+  font-family:'Eczar';
 }
 
 .form-register {
@@ -189,6 +183,5 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: #f8f8f8;
-
   /* Cambia el color de fondo según tu diseño */
 }

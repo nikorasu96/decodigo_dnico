@@ -41,3 +41,16 @@ Route::post('/formulario', function () {
     $message = request('formulario');
     //
 });
+
+Route::get('/prueba', function () {
+    return view('prueba');
+});
+
+
+// Procesar el formulario
+Route::post('/prueba', function () {
+    $message = request('prueba');
+    //
+});
+
+
