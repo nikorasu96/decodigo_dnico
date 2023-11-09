@@ -35,8 +35,31 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        Contact::create($request->all());
-        return response("Contact Created");
+        $contacto = new Contact();
+        $contacto->nombre = $request->input('nombre');
+        $contacto->email = $request->input('email');
+        $contacto->telefono = $request->input('telefono');
+        $contacto->empresa = $request->input('empresa');
+        $contacto->sitio_web_actual = $request->input('sitio_web_actual');
+        $contacto->tipo_sitio = $request->input('tipo_sitio');
+        $contacto->funcionalidades = $request->input('funcionalidad');
+        $contacto->estilo_preferido = $request->input('estilo_preferido');
+        $contacto->comentarios = $request->input('comentarios');
+
+        // Otros campos...
+
+        // Guardar funcionalidades como un array en la base de datos
+        $funcionalidades = $request->input('funcionalidades');
+
+        if (!empty($funcionalidades)) {
+            $contacto->funcionalidades = json_encode($funcionalidades);
+        } else {
+            $contacto->funcionalidades = json_encode([]); // O un valor por defecto si es apropiado
+        }
+
+        $contacto->save();
+        
+        return redirect()->route('gracias');
     }
 
     /**

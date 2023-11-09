@@ -13,11 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contacts', function (Blueprint $table) {
+        Schema::create('contacts_tables', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
             $table->string('email');
-            $table->string('comentario');
+            $table->string('telefono');
+            $table->string('empresa')->nullable(); // Haciendo empresa opcional
+            $table->string('sitio_web_actual')->nullable();
+            $table->string('tipo_sitio');
+            $table->json('funcionalidades')->default(json_encode([]));
+            $table->text('estilo_preferido');
+            $table->text('comentarios')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contacts');
+        Schema::dropIfExists('contacts_tables');
     }
 };

@@ -58,8 +58,10 @@ Route::post('/prueba', function () {
 });
 
 
-
-
 Route::get('/contacto/create', [ContactController::class, 'create'])->name('contacto.create');
 
 Route::post('/contacto', [ContactController::class, 'store'])->name('contacto.store');
+
+Route::get('/gracias', function () {
+    return view('gracias');
+})->name('gracias');
