@@ -1,6 +1,8 @@
 <?php
-
+use App\Models\Contact;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -54,3 +58,8 @@ Route::post('/prueba', function () {
 });
 
 
+
+
+Route::get('/contacto/create', [ContactController::class, 'create'])->name('contacto.create');
+
+Route::post('/contacto', [ContactController::class, 'store'])->name('contacto.store');
