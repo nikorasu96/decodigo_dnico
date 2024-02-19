@@ -1,78 +1,327 @@
-.navbar img {
-    max-width: 100%;
-    font-family: 'Eczar', sans-serif;
-    color: #212121;
-}
-  
-
-h1 {
-    text-align: center;
-    color: #f0f3f4;
-    font-family: 'Eczar', sans-serif;
-}
-
-label {
-    color: #f0f3f4;
-    font-family: 'Eczar', sans-serif;
-}
-
-
-.btn {
-    display: block;
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    color: #f0f3f4;
-    cursor: pointer;
-    font-weight: 600;
-    padding: 10px 20px;
-    margin: 0 auto;
-    text-align: center;
-    font-family: 'Eczar', sans-serif;
-}
-
-.right {
-    max-width: 400px;
-    margin: auto;
-    margin-top: 50px;
-    /* Ajustado el margen superior */
-    padding: 30px;
-    background: #9575cd;
-    border-radius: 4px;
-    box-shadow: 7px 13px 37px #ffffff;
-    font-family: 'Eczar', sans-serif;
-}
-
-.left {
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-    margin-top: 40px;
-    padding: 5px;
-    box-sizing: border-box;
-    color: #f0f3f4;
-    text-align: center;
-    font-family: 'Eczar', sans-serif;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+/* Restablecimiento de estilos por defecto de Bootstrap */
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-weight: bold;
   }
 
-.form-register {
-    max-width: 400px;
-    margin: auto;
-    margin-top: 50px;
-    /* Ajustado el margen superior */
-    padding: 30px;
-    background: #512da8;
-    border-radius: 4px;
-    box-shadow: 7px 13px 37px #000;
-    font-family: 'Eczar', sans-serif;
-}
+  .navbar {
+    background-color: #212121; /* Color de fondo */
+    color: #fff; /* Color de texto */
+    padding: 10px 0;
+    width: 100%; /* Opción 1: Ancho completo */
+    /* max-width: 100%; /* Opción 2: Ancho adaptable */
+    /* margin: 0 auto; */ /* Elimina el margen automático */
+  }
+  
+  .navbar-brand {
+    font-size: 20px;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Apila los enlaces (links) verticalmente */
+    margin-left: auto; /* Alinea los enlaces (links) a la derecha */
+  }
+  
+  .navbar-nav .nav-link { /* El enlace individual o 'link' del navbar*/
+    margin-bottom: 5px; /*  Agrega un pequeño margen debajo de cada enlace */
+  }
+  
+  /* Menú para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: row; /* Vuelve a alinear los enlaces en una fila */
+    }
+  
+    /* Creación del botón "hamburguesa" para abrir el navbar en móvil */
+    .navbar-toggler {
+      border: none;
+      margin-left: 15px; /* Margen a la izquierda */
+      float: left; /* Alineación a la izquierda */
+    }
+  
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  
+    /* Esconde la lista de opciones del navbar por defecto al ser pequeño */
+    .navbar-collapse {
+      display: none;
+    }
+  
+    /* Muestra el menú al hacer clic en el botón "hamburguesa" */
+    .navbar-collapse.show {
+      display: flex;
+      flex-direction: column;
+      position: relative; /* Posicionamiento relativo al contenedor */
+      margin-top: 50px; /* Margen superior para separar de la hamburguesa */
+      text-align: left; /* Alineación a la izquierda */
+    }
+  }
+
+  .navbar {
+    
+    border-bottom: 1px solid #ddd;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #007bff;
+  }
+  
+  
+  /* Estilos generales */
+  main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main h1{
+    margin-top: 1cm; /* Espacio superior */
+    margin-bottom: 1cm; /* Espacio inferior */
+    font-weight: bold;
+  }
+  
+  
+  header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .formulario,
+  .formulario1,
+  .formulario2,
+  .formulario3 {
+    margin: 0 auto;
+    margin-bottom: 1cm;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 900px; /* Ajusta el ancho según tu diseño */
+    background-color: #81C784;
+  }
+  
+  /* Estilos específicos para cada sección */
+  
+  .formulario label,
+  .formulario1 label,
+  .formulario2 label,
+  .formulario3 label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .formulario input,
+  .formulario textarea,
+  .formulario select,
+  .formulario1 input,
+  .formulario1 textarea,
+  .formulario1 select,
+  .formulario2 input,
+  .formulario2 textarea,
+  .formulario2 select,
+  .formulario3 input,
+  .formulario3 textarea,
+  .formulario3 select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 15px;
+    
+    
+  }
+  
+  /* Opcional: Agrega un borde para tus inputs */
+  .formulario input,
+  .formulario1 input,
+  .formulario2 input,
+  .formulario3 input,
+  .formulario textarea,
+  .formulario1 textarea,
+  .formulario2 textarea,
+  .formulario3 textarea,
+  .formulario select,
+  .formulario1 select,
+  .formulario2 select,
+  .formulario3 select {
+    border: 1px solid #ccc;
+    
+  }
+
+  input{
+    border-top-left-radius: 10px; /* Define el radio de curvatura superior izquierda */
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
+  }
+
+  textarea{
+    border-top-left-radius: 10px; /* Define el radio de curvatura superior izquierda */
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
+
+  }
+  
+  .formulario1 .funcionalidades {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .formulario1 .funcionalidades .agregar-funcionalidad {
+    margin-left: 10px;
+  }
+  
+  .formulario2 .diseno-estilo {
+    resize: none;
+  }
 
 
-footer p {
-    margin-top: 1px;
-    color: #f0f3f4;
-}
+
+  .funcionalidades {
+    display: flex;
+    flex-direction: column; /* Apila elementos verticalmente */ 
+    margin-top: 1rem; /* Margen superior */
+  }
+  
+  .label-funcionalidad {
+     margin-bottom: 5px;
+  }
+  
+  .input-container {
+    display: flex; 
+    align-items: center;
+  }
+  
+  .agregar-funcionalidad {
+    margin-left: 10px; 
+  }
+  
+  .agregar-funcionalidad {
+    background-color: #424242; /* Verde */
+    border: 1px solid #339933; /* Verde oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #ffffff; /* Blanco */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    width: 40%;
+    margin-bottom: 16px;
+    padding-top: 12px; /* Aumenta el espacio superior */
+    padding-bottom: 12px; /* Aumenta el espacio inferior */
+  
+    /* Efecto hover */
+    &:hover {
+      background-color: #99ee99; /* Verde claro */
+    }
+  }
+
+  
+  /* Botón "Continuar" */
+.continuar {
+    background-color: #424242; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: bold; /* Peso de la fuente */
+    padding: 10px 20px; /* Relleno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Radio de borde */
+    cursor: pointer; /* Cursor de mano */
+    transition: 0.3s; /* Transición */
+    padding-top: 12px; /* Aumenta el espacio superior */
+    padding-bottom: 12px;
+    margin-bottom: 0.3cm;
+    width: 25%;
+
+    box-shadow: 0 0 0 3px #303132; /* Sombra al pasar el cursor */
+    
+  
+    /* Efecto al pasar el cursor por encima */
+    &:hover {
+      background-color: #63b4ee;
+    }
+  
+    /* Efecto al presionar el botón */
+    &:active {
+      background-color: #004077;
+    }
+  }
+  
+  /* Botón "Volver" */
+  .volver {
+    border: 2px solid #0073b7; /* Color del borde */
+    color: #303132; /* Color del texto */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: normal; /* Peso de la fuente */
+    padding: 10px 20px; /* Relleno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Radio de borde */
+    cursor: pointer; /* Cursor de mano */
+    transition: 0.3s; /* Transición */
+    padding-top: 12px; /* Aumenta el espacio superior */
+    padding-bottom: 12px;
+    margin-bottom: 1cm;
+    width: 25%;
+
+    box-shadow: 0 0 0 3px #303132; /* Sombra al pasar el cursor */
+  
+    /* Efecto al pasar el cursor por encima */
+    &:hover {
+      background-color: #bbb;
+    }
+  
+    /* Efecto al presionar el botón */
+    &:active {
+      background-color: #aaa;
+    }
+  }
+  
+  /* Estilos del pie de página */
+  footer {
+    width: 100%;
+    background-color: #212121;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+  
+  footer p {
+    margin: 5px 0;
+    font-size: 14px;
+
+    margin-bottom: 0.3cm;
+  }
+  
+  /* Media queries para ajustar el diseño en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .formulario,
+    .formulario1,
+    .formulario2,
+    .formulario3 {
+      width: 95%;
+    }
+  
+    footer {
+      font-size: 12px;
+    }
+  }
+  
+  /* Eliminación de estilos redundantes */
+  section {
+    display: block; /* Ya es el comportamiento por defecto */
+  }
+  
+  /* Se eliminaron estilos redundantes de la navbar 
+  y otros elementos que no se especificaron en la solicitud. */
+  
+  

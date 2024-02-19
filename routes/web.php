@@ -2,6 +2,7 @@
 use App\Models\Contact;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContactoController;
 use Illuminate\Http\Request;
 
 /*
@@ -58,9 +59,9 @@ Route::post('/prueba', function () {
 });
 
 
-Route::get('/contacto/create', [ContactController::class, 'create'])->name('contacto.create');
+Route::get('/contacto', 'ContactoController@index');
+Route::post('/contacto', 'ContactoController@store');
 
-Route::post('/contacto', [ContactController::class, 'store'])->name('contacto.store');
 
 Route::get('/gracias', function () {
     return view('gracias');
